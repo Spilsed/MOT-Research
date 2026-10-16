@@ -1,0 +1,47 @@
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+
+\setlist[itemize]{leftmargin=*, itemsep=4pt, topsep=4pt}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt}
+
+\begin{document}
+
+\section*{Timeline}
+
+\subsection*{September (Mathematical Formalization)}
+\begin{itemize}
+  \item Get a basic handle on all of the concepts of both questions
+  \item Check for novelty and feasibility
+  \item Research deeper into the two potential topics and decide on one before the end of September
+\end{itemize}
+
+\subsection*{October (Base Infrastructure)}
+\begin{itemize}
+  \item Continue working on mathematical formalization as many parts of it will most likely still be incomplete by the end of September
+  \item Have basic optimal transport (OT) framework running
+  \item Add a variety of tests to the framework
+  \item Begin to plan how to extend the framework to work with MOTs
+\end{itemize}
+
+\subsection*{November (Neural Solver Integration)}
+\begin{itemize}
+  \item Finish the extension of the framework so that it can handle MOTs
+  \item Complete the implementation of the neural network (CINN/PINN)
+  \item Development of the loss function
+  \item Run extensive testing to validate correctness of code
+\end{itemize}
+
+\subsection*{December (Parameterization \& Initial Training)}
+\begin{itemize}
+  \item Look into methods to formally prove the correctness of code
+  \item Start training / parameterizing of all neural networks, utilizing our continuity equations and martingale conditions
+  \item If possible start to use standard 1D and 2D Black--Scholes dynamics as benchmark reference solutions before scaling to multi-asset continuum limits to verify implementation and direction
+\end{itemize}
+
+\end{document}
