@@ -1,0 +1,29 @@
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{8pt}
+\setlist[enumerate]{leftmargin=*, itemsep=8pt, topsep=4pt}
+
+\begin{document}
+
+\section*{Abstract}
+
+This project will deliver an end-to-end research showcase. The project's focus is addressing some of the critical challenges that arise in derivatives pricing, options bounds, and model calibration. There are two current research directions that will be explored for novelty and feasibility.
+
+\begin{enumerate}
+  \item \textbf{Dual Extrapolation Solvers for Unbalanced Partial Martingale Optimal Transport (MOT)}
+
+  Options chains can have illiquid quotes and missing strike data which violates the balanced measure assumption required by standard MOT and resulting in invalid dual bounds. To solve this some partial or unbalanced MOT solver can be formulated that relaxes some of the strict marginal constraints using mass transport penalties. This allows for robust no-arbitrage bounds to be extracted directly from noisy and incomplete real-world data.
+
+  \item \textbf{Information Based Multi-Marginal Continuous Time MOT Through Benamou--Brenier Hydrodynamic Flows}
+
+  Multi-period and continuous time MOT have exponential compute bottlenecks when scaled beyond two time steps. Try to construct a continuous time fluid-dynamics formulation for MOT using Benamou--Brenier characterization. You can parameterize them through neural networks (PINNs/CINNs) constrained by the continuity equation and local martingale conditions. This can help to bypass discrete step bottlenecks that are inherent to the traditional process.
+\end{enumerate}
+
+\end{document}
