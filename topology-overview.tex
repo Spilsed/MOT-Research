@@ -30,6 +30,13 @@
 		\end{itemize}
 		\subsection{Complete Spaces}
 			\subsubsection{Cauchy Sequences and Completeness}
+			Completeness addresses a fundamental structural deficiency in arbitrary metric spaces which is the existence of holes in the space where limits should be. If you take the set of rational numbers $\mathbb{Q}$ and apply the standard Euclidean metric $d(x,y)=|x-y|$ you can construct a sequence of rational numbers that get arbitrarily close to each other as the index increases, but the values that they are converging to (irrational numbers) don't exist in $\mathbb{Q}$.
+			
+			A sequence $(x_n)_{n=1}^{\infty}$ in a metric space $(X, d)$ is a Cauchy sequence if the elements of the sequence eventually become arbitrarily close to each other. Formally this means that for every $\epsilon > 0$, there exists an integer $N\in\mathbb{N}$ such that for all indices $m,n\geq N$, the distance satisfies $d(x_m,x_n) <\epsilon$.
+			
+			Every convergence sequence is necessarily Cauchy because of the triangle inequality. However, the converse is not true in general metric spaces. A metric space is complete only if \textit{every} Cauchy sequence in $X$ converges to a limit that is in $X$.
+			
+			Completeness is necessary for analysis because it allows us to guarantee that a solution exists for limit problems without needing to know the explicit value of the limit before. Standard Euclidean space $\mathbb{R}^n$, the space of real numbers, and Hilbert/Banach spaces are complete, but spaces of continuous functions under certain incomplete metrics are not.
 			\subsubsection{The Banach Fixed-Point Theorem}
 			\subsubsection{The Baire Category Theorem}
 		\subsection{$G_\delta$ Sets and $F_\sigma$ Sets}
