@@ -5,6 +5,12 @@
 \begin{document}
 	\section{Introduction to Topology}
 		\subsection{Topological Spaces and Axioms}
+		A topological space is an ordered pair $(X,\tau)$, where $X$ is a set and $\tau$ a topology on $X$, or a set of subsets of $X$ (these are open sets) satisfying the following axioms:
+		\begin{enumerate}
+			\item The empty set and the entire set ($X$) are in $\tau$.
+			\item The union of any collection of sets in $\tau$ is also in $\tau$: $$\bigcup_{\alpha\in I}U_{\alpha}\in \tau\text{ for all }U_{\alpha}\in\tau$$
+			\item The intersection of any finite collection of sets in $\tau$ are in $\tau$: $$\bigcup_{i=1}^n U_i\in t\text{ for all }U_1,...,U_n\in t$$
+		\end{enumerate}
 		\subsection{Open Sets and Closed Sets}
 		\subsection{Neighborhoods and Bases}
 		\subsection{Interior, Closure, and Boundary}
