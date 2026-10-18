@@ -38,6 +38,17 @@
 			
 			Completeness is necessary for analysis because it allows us to guarantee that a solution exists for limit problems without needing to know the explicit value of the limit before. Standard Euclidean space $\mathbb{R}^n$, the space of real numbers, and Hilbert/Banach spaces are complete, but spaces of continuous functions under certain incomplete metrics are not.
 			\subsubsection{The Banach Fixed-Point Theorem}
+			The Banach Fixed-Point Theorem is also known as the Contraction Mapping Principle, this theorem is one of the most widely used tools in nonlinear analysis, differential equations, and numerical methods.
+			
+			To define a contraction mapping let $(X,d)$ be a complete metric space. A map $T:X\to X$ is a contraction mapping if there exists a fixed constant $k\in[0,1)$ such that for all $x,y\in X$: $$d(Tx,Ty)\leq kd(x,y)$$ The constant $k$ represents a strict uniform compression factor.
+			
+			The Banach Fixed-Point Theorem guarantees that $T$ possesses a unique fixed point $x^*\in X$ ($Tx^* = x^*$). It gives an explicit constructive method which is staring from any arbitrary initial guess $x_0\in X$, the Picard iteration sequence defined by $x_{n+1}=Tx_n$ converges geometrically fast to the unique fixed point $x^*$.
+			
+			Uniqueness can be proven. If $x^*$ and $y^*$ were two distinct fixed points, then $d(x^*,y^*)=d(Tx^*,Ty^*)\leq kd(x^*,y^*)$. Since $0\leq k< 1$, this forces $(1-k)d(x^*,y^*)\leq 0$, which implies that $d(x^*,y^*)=0$, so $x^*=y^*$.
+			
+			Convergence can be proven. By bounding the distance between successive iterations using the geometric series bound $d(x_n,x_{n+m})\leq \frac{k^n}{1-k}d(x_0,x_1)$, one shows that the sequence is Cauchy. Because $X$ is complete, the limit $x^* = \lim_{n\to\infty}x_n$ exists, and continuity of $T$ ensures that $Tx^*=x^*$
+			
+			The applications of this theorem are used to prove the existence and uniqueness of solutions to ODEs, integral equations, and implicit function theorems.
 			\subsubsection{The Baire Category Theorem}
 		\subsection{$G_\delta$ Sets and $F_\sigma$ Sets}
 			\subsubsection{Borel Hierarchy Foundations}
